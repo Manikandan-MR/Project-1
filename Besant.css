@@ -132,11 +132,11 @@ option{
 }
 @keyframes image{
    0%{
-       background-image: url("./BEMS/pexels-andrea-piacquadio-3807755.jpg");
+       background-image: url("../BEMS/pexels-andrea-piacquadio-3807755.jpg");
        color: black;
    }
    20%{
-       background-image: url("./BEMS/pexels-armin-rimoldi-5554303.jpg");
+       background-image: url("../BEMS/pexels-armin-rimoldi-5554303.jpg");
        color: rgb(2, 2, 2);
       }
    40%{
@@ -144,15 +144,15 @@ option{
       color: white;
    }
    60%{
-      background-image: url("./BEMS/pexels-christina-morillo-1181676.jpg");
+      background-image: url("../BEMS/pexels-christina-morillo-1181676.jpg");
       color: rgb(0, 0, 0);
    }
    80%{
-      background-image: url("./BEMS/pexels-fauxels-3184407.jpg");
+      background-image: url("../BEMS/pexels-fauxels-3184407.jpg");
       color: rgb(0, 0, 0);
    }
    100%{
-      background-image: url("./BEMS/pexels-stanley-morales-1454360.jpg");
+      background-image: url("../BEMS/pexels-stanley-morales-1454360.jpg");
       color: rgb(255, 254, 254);
    }
 }
