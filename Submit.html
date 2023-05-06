@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit</title>
+</head>
+<style>
+    .main{
+        display: grid;
+        grid-template-columns:40% 60%;
+    }
+    .first{
+        text-align: center;
+        background:linear-gradient(90deg, rgb(251, 226, 226)0%,rgba(109, 109, 221, 0.5)100%);
+        color: black;
+    }
+    .second{
+        font-size: larger;
+        margin-left: 80px;
+    }
+    input{
+        border: none;
+        box-shadow: 0px 0px 10px rgb(115, 106, 106);
+        padding: 7px;
+        border-radius: 5px;
+        font-size: medium;
+        outline: none;
+        transition: .3s;
+    }
+    input:hover{
+        box-shadow: 0 0 10px 2px rgb(16, 16, 232);
+    }
+    h1{
+        font-size: 40px;
+    }
+    h3{
+        position: relative;
+        bottom: 25px;
+        font-size: larger;
+    }
+</style>
+<body>
+<div class="main">
+
+  <div class="first" style="letter-spacing: .8px;">
+   <div style="position: relative; top:150px;">
+    <h1>Besant </h1>
+    <h3 >Technologies</h3>
+    <h1>MR.BELL</h1>
+    <h3>Inspired Application</h3>
+    <p style="font-size: larger;">To connect with us <br>  please enter the details</p>
+   </div>
+  </div>
+
+  <div class="second">
+    <h1>Create an account</h1>
+
+    <label >First Name</label><br> 
+    <input type="text" placeholder="First Name" style="width: 200px;margin-top: 10px;" > <br>
+   <div style="position: relative; left: 240px;bottom: 65px; " >
+    <label >Last Name</label><br>
+    <input type="text" placeholder="Last Name" style="width: 200px;margin-top: 10px;"> <br>
+   </div>
+   <div style="position: relative; left: 500px;bottom: 130px;" >
+    <label >Age</label><br>
+    <input style="margin-top: 10px;" type="Number" placeholder="20-10-1998"><br>
+   </div>
+   <div style="position: relative; bottom: 50px; ">
+    <label >Mobile Number</label><br>
+    <input type="Number" placeholder="** **" style="width: 280px;margin-top: 10px;"> <br>
+  </div>
+  <div style="position: relative; left: 400px;bottom: 115px;">
+    <label >Email</label><br>
+    <input type="email" placeholder="abc@xxx.zzz" style="width: 280px;margin-top: 10px;"> <br>
+</div> 
+<div style="position: relative;bottom: 70px; ">
+    <label >Description</label><br>
+    <input type="textarea" placeholder="email@gmail.com"  style="width: 690px; height: 100px;margin-top: 10px;"><br>
+ </div>
+    <p style="position: relative; left:530px; bottom:70px;margin-top: 10px;">Max 150 characters</p><br>
+
+<div style="position: relative; bottom: 85px;">
+    <label >Password</label><br>
+    <input type="password" placeholder="*********" style="width: 280px;margin-top: 10px;"><br>
+</div>
+<div style="position: relative; left: 400px;bottom: 150px;">
+    <label >Confirm Password</label><br>
+    <input type="password" placeholder="********" style="width: 280px;margin-top: 10px;"><br>
+</div>
+
+    <button id="resetbtn" style=" font-weight:bolder; font-size:large;position: relative;
+     left: 200px;bottom: 80px; padding: 5px; border-radius: 10px; width: 
+     100px;background-color: rgba(255, 109, 5, 0.991);border:none; color: white;box-shadow: 0 0 10px 2px orange;cursor: pointer;transition: .3s;">Reset</button>
+
+    <button id="submitbtn" style="font-weight:bolder; font-size:large;position: relative; left: 350px;bottom:
+     80px; padding: 5px; border-radius: 10px; width: 100px;
+     background-color: rgb(22, 57, 228);color: white;border:none;box-shadow: 0 0 10px 2px blue; cursor: pointer;transition: .3s;">Submit</button>
+
+
+  </div>
+</div>
+<script>
+    const enquairybtn=document.getElementById("enquairy")
+function over(){
+
+    enquairybtn.style.display="block"
+}
+function out(){
+
+    enquairybtn.style.display="none"
+}
+
+const applybtn=document.getElementById("apply")
+function myfunction1(){
+    applybtn.style.display="block"
+}
+function myfunction2(){
+    applybtn.style.display="none"
+}
+let x=document.getElementById('btn')
+x.addEventListener('click',myFunction)
+function myFunction(){
+location.href="submit.html"
+// console.log("hi")
+}
+</script>
+</body>
+</html> 

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <script src="https://kit.fontawesome.com/81ef6dd811.js" crossorigin="anonymous"></script>
+    <style>
+        :root{
+            --bg-color:#1f242d;
+            --second-bg-color:#323946;
+            --text-color:#fff;
+            --main-color:rgb(220, 223, 41);
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            user-select: none;
+        }
+        .header{
+            width: 100%;
+            background-color: var(--bg-color);
+            height: 50px;
+        }
+        h3{
+            padding: 13px 0px 0px 100px;
+            font-size: larger;
+            color: var(--main-color);
+            letter-spacing: 1.1px; 
+        }
+        .content{
+             height: 250px;
+             width: 300px;
+             margin: auto;
+             border: 1px  solid var(--text-color);
+             background-color: var(--second-bg-color);
+             margin-top: 50px;
+             border-radius: 10px;
+             box-shadow: 0 0 20px 4px gray;
+             transition: .5s;
+        }
+        .content:hover{
+            transform: scale(1.01);
+            border-color: black;
+        }
+        h2{
+            margin-left: 80px;
+            color:var(--main-color);
+        }
+        #p1{
+            margin-left: 30px;
+            color: rgb(255, 255, 255);
+            letter-spacing: 1px;
+            font-weight: 600;
+
+        }
+        .btn1{
+            margin-left: 30px;
+            border-radius: 5px ;
+            border-right:none ;
+            height: 25px;
+            width: 30px;
+            background-color: var(--main-color);
+            border: none;
+            box-shadow: 0 0 10px 2px var(--main-color) ;
+        }
+        .btn3{
+            box-shadow: 0 0 10px 2px var(--main-color) ;
+            border: none;
+            background-color: var(--main-color);
+            border-radius: 5px ;
+            margin-left: 30px;
+            border-right:none ;
+            height: 25px;
+            width: 30px;
+        }
+        input{
+            padding: 7px;
+            border: 1px  solid rgb(210, 205, 205);
+            border-radius:5px;
+            margin-left: 10px;
+        }
+        input[type="password"],input[type="text"]{
+            height: 10px;
+        }
+        #btn2{
+            margin-left: 180px;
+            padding: 7px;
+            width: 70px;
+            background-color: var(--main-color);
+            border: none;
+            border-radius: 10px;
+            font-size: 15px;
+            color: var(--bg-color);
+            font-weight: 600;
+            transition: .3s;
+            cursor: pointer;
+        }
+        #btn2:hover{
+            box-shadow: 0 0 10px 2px var(--main-color);
+        }
+        .footer{
+            width: 100%;
+            background-color:var(--bg-color);
+            height: 50px;
+            margin: 180px 0px 10px 10px;
+        }
+        #p2{
+            margin-left: 30px;
+            color: var(--main-color);
+            position: relative;
+            top: 15px;
+            letter-spacing: 1px;
+            font-weight: 600;
+            transition: .3s;
+            cursor: pointer;
+        }
+        #p2 i{
+            box-shadow: 0 0 10px 2px var(--main-color);
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h3>Besant Technologies</h3>
+    </div>
+    <div class="content">
+        <h2>Login</h2>
+        <p id="p1">Please provide your details</p>
+        <form onsubmit="onFormSubmit()">
+         <button class="btn1"><i class="fa-solid fa-user"></i></button><input type="text" id="username" placeholder="Username" required>
+         <br><br>
+         <button class="btn3"><i class="fa-sharp fa-solid fa-key"></i></button><input type="password" id="password" placeholder="Password" required>
+         <br><br>
+         <input type="submit" id="btn2">
+        </form>
+    </div>
+    <div class="footer">
+        <p id="p2"><i class="fa-regular fa-copyright"></i> &nbsp;&nbsp;BT Sample Project</p>
+    </div>
+    <script>
+        function onFormSubmit(){
+            event.preventDefault();
+            const a=document.getElementById("username").value
+            const b=document.getElementById("password").value
+            if (a.length < 5){
+                alert("Enter 5 or morethan 5 characters")
+            }
+            else if(b.length<=7){
+                alert("Enter 7 or morethan 7 characters")
+            }
+            else{
+                alert("successfully submitted")
+                x()
+            }
+        }
+        function x(){
+            window.location.href="Besant.html"
+        }
+    </script>
+
+</body>
+</html>

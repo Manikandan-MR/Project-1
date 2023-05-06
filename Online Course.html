@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Online Courses</title>
+    <script src="https://kit.fontawesome.com/43df530aea.js" crossorigin="anonymous"></script>
+    <style>
+      *{
+        user-select: none;
+      }
+        #Header{
+          background-color: #1f242d;
+          width: 100%;
+        }
+        .home{
+            font-size:15px;
+            background-color:rgb(220, 223, 41);
+            color: #323946;;
+            text-decoration: none;
+            padding: 6px 8px;
+            font-weight: 600;
+            letter-spacing: .8px;
+            position: relative;
+            top: 30px;
+            border-radius: 8px;
+            margin-left: 50px;
+            transition: .3s;
+        }  
+        .home:hover{
+          box-shadow: 0 0 10px 2px rgb(220, 223, 41);
+        }
+        
+        h1{
+          position: absolute;
+          left: 85%;
+          bottom: 540px;
+          cursor: pointer;
+          color: rgb(220, 223, 41);
+        }
+        h1:before{
+		      content: attr(data-count);
+	        color: white;
+	        position: absolute;
+	        right: 0px;
+	        font-size: 15px;
+	        text-align: center;
+	        top: -12px;
+	        width: 20px;
+	        height: 20px;
+	        background: red;
+	        border-radius: 50%;
+	        opacity: 0;
+	      }
+	      h1.zero:before{
+		      opacity: 1;
+        }
+        ::placeholder{
+          font-style:normalS;
+          letter-spacing: .8px;
+          padding-left: 5px;
+        }
+        input{
+          width: 250px;
+          height: 30px;
+          border-radius: 7px;
+          font-size: large;
+          margin-left: 800px;
+          margin-bottom: 20px;
+          transition: .3s;
+          border: 1px solid gray;
+        }
+        input:hover{
+          box-shadow: 0 0 10px 2px gray;
+        }
+        .box{
+          display: grid;
+          grid-template-columns: 30% 30% 30%;
+          grid-gap: 30px;
+          margin-left: 60px;
+        } 
+        .item img{
+            height: 200px;
+            text-align: center;
+            border-radius: 5px;
+        }
+        #img1{
+            width: 250px;
+            margin: 20px 0px 0px 45px;
+        }
+        #img2{
+          margin: 20px 0px 0px 50px;
+          width: 230px;
+        }
+        #img3{
+          margin: 20px 0px 0px 60px;
+          width: 210px;
+        }
+        #img4{
+          width: 340px;
+          margin:10px 0px 0px 5px;
+        }
+        #img5{
+            width: 270px;
+            margin: 10px 0px 0px 35px;
+        }
+        #img6{
+          width: 320px;
+          margin: 10px 0px 0px 15px;
+        }
+        .item{
+          border: none;
+          padding: 10px;
+          width: 350px;
+          padding-bottom: 20px;
+          border-radius: 10px;
+          margin-bottom: 20px;
+          background-color: #323946;
+          color: white;
+          transition: .3s;
+        }
+        .item:hover{
+          box-shadow: 0px 0px 20px 4px #323946 ;
+        }
+        p{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 18px;
+            width: 320px;
+            margin-left: 20px;
+        }
+        h6{
+          font-size: 17px;
+          margin-left: 50px;
+          margin-top: -10px;
+          letter-spacing: .5px;
+        }
+        h3{
+          margin-left: 50px;
+          letter-spacing: .5px;
+          margin-top: -25px;
+        }
+        button{
+            padding:5px 10px;
+            margin-left: 150px;
+            background-color: rgb(220, 223, 41);
+            color: #323946;
+            border-radius: 7px;
+            font-weight: 600;
+            letter-spacing: .8px;
+            border: none;
+            cursor: pointer;
+            transition: .3s;
+        }
+        button:hover{
+          box-shadow: 0 0 10px 2px rgb(220, 223, 41);
+        }
+        .select{
+		      width: 60%;
+		      height: auto;
+		      padding: 5%;
+		      background: #222;
+		      position: absolute;
+		      top: -300%;
+		      left: 10%;
+		      transition: 0.5s;
+          /* overflow-y: auto; */
+          margin: auto;
+	      }
+	      .select.display{
+		      top: 30px;
+	      }
+        #close{
+          position: absolute;
+          background-color: white;
+          color: black;
+          width: 20px;
+          height: 20px;
+          right: 1px;
+          top: 2px;
+          padding: 5px 0px 0px 7px;
+          cursor: pointer;
+          transition: opacity 0.2s ease-out;
+        }
+
+        .select.hidden{
+          top:-2000px;
+        } 
+	      .select div{
+	      	width: 100%;
+	      	height: 250px;
+	      	display: flex;
+	      	padding: 5px;
+	      	border: 1px solid white;
+	      	position: relative;
+          margin: 5px auto;
+	      }
+	      .select div img{
+	      	width: 300px;
+	      	height: 200px;
+	      }
+	      .select div p{
+	      	padding: 35px;
+	      	color: white;
+          position: relative;
+          top: -30px;
+          width: 700px;
+          height: 300px;
+	      }
+        .select div h6{
+          position: absolute;
+          left: 40%;
+          top: 80%;
+        }
+        .select div h3{
+          position: absolute;
+          left: 40%;
+          top: 70%;
+        }
+	      .select div button{
+          position: absolute;
+	      	left: 450px;
+	      	top: 70%;
+          background-color: rgb(220, 223, 41);
+          color: black;
+          width: 100px;
+          height: 40px;
+	      }
+    </style>
+</head>
+<body>
+      <div id="Header">
+      <div>
+        <a href="./Besant.html" class="home"> <i class="fa-solid fa-house-chimney"></i></i>&nbsp; Home</a> 
+      </div>
+        <h1 id="carticon"><i class=" fa fa-shopping-cart"></i></h1>
+       <input type="text" id="filter" placeholder="search..." onkeyup="search()">
+      </div>
+        <br><br>
+
+  <div class="box">
+    <div class="item" id="box1">
+      <img id="img1" src="https://tse1.mm.bing.net/th?id=OIP.5tgjYvUMJsGw5hhrmeGOPAHaHa&pid=Api&P=0">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, quo, modi ea voluptas tempora vero cumque incidunt eum animi</p>
+      <h6><span style="color:rgb(220, 223, 41)">Fees:</span> Rs.10000</h6>
+      <h3 class="card-title"><span style="color:rgb(220, 223, 41);">Title :</span> Javascript</h3><button>Add-cart</button>
+
+    </div>
+
+    <div class="item" id="box2">
+      <img id="img2" src="https://tse2.mm.bing.net/th?id=OIP.scZtKzM0T-sPYZxYBAJvRAHaIO&pid=Api&P=0">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, quo, modi ea voluptas tempora vero cumque incidunt eum animi</p>
+      <h6><span style="color:rgb(220, 223, 41)"> Fees: </span> Rs.10000</h6>
+      <h3  class="card-title"><span style="color:rgb(220, 223, 41);">Title :</span> Python</h3>
+      <button>Add-cart</button>
+    </div>
+    <div class="item" id="box3">
+      <img id="img3" src="https://tse3.mm.bing.net/th?id=OIP.QlPemi-BGIRmzOSUF3vLkwHaHa&pid=Api&P=0">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, quo, modi ea voluptas tempora vero cumque incidunt eum animi</p>
+      <h6><span style="color:rgb(220, 223, 41)">Fees: </span> Rs.10000</h6>
+      <h3 class="card-title"> <span style="color:rgb(220, 223, 41)">Title :</span> Html</h3>
+
+      <button>Add-cart</button>
+    </div>
+</div> 
+<br>  
+ <div class="box">   
+    <div  class="item" id="box4">
+      <img id="img4" src="https://tse3.mm.bing.net/th?id=OIP.v_LAtGZmwMWrSBRwsAiHtgHaEM&pid=Api&P=0">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, quo, modi ea voluptas tempora vero cumque incidunt eum animi</p>
+      <h6><span style="color:rgb(220, 223, 41)">Fees: </span> Rs.10000</h6>
+      <h3 class="card-title"><span style="color:rgb(220, 223, 41)">Title : </span> CSS</h3>
+
+      <button>Add-cart</button>
+    </div>
+        <div class="item" id="box5">
+      <img id="img5" src="https://tse1.mm.bing.net/th?id=OIP.RVgC6Bbd-pFjwUZg1HtkDwHaFj&pid=Api&P=0">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, quo, modi ea voluptas tempora vero cumque incidunt eum animi</p>
+      <h6><span style="color:rgb(220, 223, 41)">Fees: </span> Rs.10000</h6>
+      <h3 class="card-title"><span style="color:rgb(220, 223, 41)">Title :</span> Devops</h3>
+
+      <button>Add-cart</button>
+
+    </div>
+        <div class="item" id="box6">
+      <img id="img6" src="https://tse1.mm.bing.net/th?id=OIP.S-9EjIzAEYqbP1oktJVc5wHaEw&pid=Api&P=0">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, quo, modi ea voluptas tempora vero cumque incidunt eum animi</p>
+      <h6><span style="color:rgb(220, 223, 41)">Fees:</span> Rs.10000</h6>
+      <h3 class="card-title"> <span style="color:rgb(220, 223, 41)">Title :</span> AWS</h3>
+
+      <button>Add-cart</button>
+
+    </div>
+</div>
+
+    <div class="select">
+      <span id="close" ><i class="fa-solid fa-xmark"></i></span>
+
+    </div>
+
+
+<script>
+function search(){
+    const input=document.getElementById("filter").value.toUpperCase()
+    const card=document.getElementsByClassName("item")
+    for(let i=0;i<card.length; i++){
+       var title= card[i].querySelector(".card-title")
+       if(title.innerText.toUpperCase().indexOf(input)>-1){
+        card[i].style.display=""
+       }
+       else{
+        card[i].style.display="none";
+       }
+    }
+}
+  const cart=document.getElementById("carticon")
+  const btn=document.getElementsByTagName("button")
+  const select=document.querySelector(".select")
+  var close=document.querySelector('#close');
+
+  for(var b of btn){
+    b.addEventListener("click",(e)=>{
+          var add=Number(cart.getAttribute('data-count') ||0);
+          cart.setAttribute('data-count',add+1);
+          cart.classList.add('zero');
+        var parent=e.target.parentNode;
+        var clone=parent.cloneNode(true);
+        select.appendChild(clone);
+        clone.lastElementChild.innerText="Book Now"
+        if(clone){
+            cart.onclick=()=>{
+                select.classList.toggle("display")
+            }
+        }
+        close.onclick=()=>{
+				  select.classList.toggle("hidden");
+			  }
+    })
+  }
+</script>
+</body>
+</html>
